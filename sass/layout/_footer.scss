@@ -12,9 +12,10 @@
     &__box {
         @media screen and (min-width: 768px){
         display: flex;
-    //     flex-wrap: wrap;
-    //     justify-content: space-around;
+        flex-wrap: wrap;
+        // justify-content: flex-start;
         align-items: baseline;
+        
         }
     //     @media screen and (min-width: 1200px) {
     //     display: flex;
@@ -34,7 +35,8 @@
     margin-bottom: 60px;
 @media screen and (min-width: 768px){
     margin-bottom: 0;
-}
+    
+    }
 }
 
 .adress-list__contact {
@@ -93,7 +95,7 @@
 }
 
 .footer__subscr {
-    // margin-left: 93px;
+    margin-left: 93px;
     
 }
 

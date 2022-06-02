@@ -1,17 +1,19 @@
  .header {
      border: 1px solid #ECECEC;
-    .container {
-        display: flex;
-    }
+    // .container {
+    //     display: flex;
+    // }
  }
 
- .navigation {
-     display: flex;
-     align-items: center;
- }
+//  .navigation {
+//     //  display: flex;
+//     //  align-items: center;
+//  }
 
  .navigation-list {
-     display: flex;
+    display: none;
+    //  display: flex;
+    
  }
 
  .navigation-list__item {
