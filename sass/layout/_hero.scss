@@ -1,6 +1,7 @@
 .hero {
-    padding-top: 118px;
-    padding-bottom: 118px;
+    // padding-top: 118px;
+    // padding-bottom: 118px;
+    padding:118px 30px;
     margin: 0 auto;
     width: 100%;
     max-width: 1600px;
@@ -17,8 +18,10 @@
 }
 }
 .hero__container{
-    padding-left: 0;
-    padding-right: 0;
+    @media screen and (min-width: 480px){
+    padding-left: 60px;
+    padding-right: 60px;
+}
 }
 .hero__title {
     font-weight: 900;
@@ -32,6 +35,9 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
+@media screen and (min-width: 480px) {
+    max-width: 360px;
+    }
 @media screen and (min-width: 1200px){
     font-size: 44px;
     line-height: 1.36;
