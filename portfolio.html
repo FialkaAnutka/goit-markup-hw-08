@@ -15,29 +15,65 @@
     <title>"Вебстудия"</title>
   </head>
   <body>
-    <header class="header">
-      <div class="container">
-        <nav class="navigation">
-          <a href="" class="logo header__logo link">Web<span class="logo__dark">Studio</span></a>
-          <ul class="navigation-list list">
-            <li class="navigation-list__item"><a href="./index.html" class="navigation-list__link link">Студия</a></li>
-            <li class="navigation-list__item"><a href="" class="navigation-list__link link current">Портфолио</a>
-            </li>
-            <li class="navigation-list__item"><a href="" class="navigation-list__link link">Контакты</a></li>
-          </ul>
-        </nav>
-        <ul class="contact-list list">
-          <li class="contact-list__item"><a href="mailto:info@devstudio.com" class="contact-list__link link">
-              <svg class="contact-list__icon" width="16" height="12">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>info@devstudio.com</a></li>
-          <li class="contact-list__item"><a href="tel:+380961111111" class="contact-list__link link">
-              <svg class="contact-list__icon" width="10" height="16">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>+38 096 111 11 11</a></li>
+  <header class="header">
+    <div class="container header__container">
+      <nav class="navigation">
+        <a href="" class="logo header__logo link">Web<span class="logo__dark">Studio</span></a>
+        <button type="button" class="menu-open-btn">
+          <svg class="icon-menu" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu"></use>
+            <!-- <use class="icon-close" href="./images/icons.svg#icon-close"></use> -->
+          </svg></button>
+        <ul class="navigation-list list">
+          <li class="navigation-list__item"><a href="./index.html" class="navigation-list__link link">Студия</a></li>
+          <li class="navigation-list__item"><a href="" class="navigation-list__link link current">Портфолио</a>
+          </li>
+          <li class="navigation-list__item"><a href="" class="navigation-list__link link">Контакты</a></li>
         </ul>
+      </nav>
+      <ul class="contact-list list">
+        <li class="contact-list__item"><a href="mailto:info@devstudio.com" class="contact-list__link link">
+            <svg class="contact-list__icon" width="16" height="12">
+              <use href="./images/icons.svg#icon-envelope"></use>
+            </svg>info@devstudio.com</a></li>
+        <li class="contact-list__item"><a href="tel:+380961111111" class="contact-list__link link">
+            <svg class="contact-list__icon" width="10" height="16">
+              <use href="./images/icons.svg#icon-smartphone"></use>
+            </svg>+38 096 111 11 11</a></li>
+      </ul>
+  
+  
+      <div class="mob-menu is-hidden">
+        <div class="mob-wrap">
+          <button type="button" class="menu-close-btn"><svg class="icon-close" width="40" height="40">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg></button>
+          <ul class="mob-list list">
+            <li class="mob-list__item"><a href="./index.html" class="mob-list__link link">Студия</a></li>
+            <li class="mob-list__item"><a href="" class="mob-list__link link current">Портфолио</a></li>
+            <li class="mob-list__item"><a href="" class="mob-list__link link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="mob-menu__contacts">
+          <ul class="mob-contact-list list">
+            <li class="mob-contact-list__item"><a href="tel:+380961111111"
+                class="mob-contact-list__link mob-contact-list__link--tel link">
+                +38 096 111 11 11</a></li>
+            <li class="mob-contact-list__item"><a href="mailto:info@devstudio.com"
+                class="mob-contact-list__link mob-contact-list__link--mail link">
+                info@devstudio.com</a></li>
+          </ul>
+          <ul class="mob-soc list">
+            <li lang="en" class="mob-soc__item"><a href="" class="mob-soc__link link">Instagram</a></li>
+            <li lang="en" class="mob-soc__item"><a href="" class="mob-soc__link link">Twitter</a></li>
+            <li lang="en" class="mob-soc__item"><a href="" class="mob-soc__link link">Facebook</a></li>
+            <li lang="en" class="mob-soc__item"><a href="" class="mob-soc__link link">LinkedIn</a></li>
+          </ul>
+        </div>
+  
       </div>
-    </header>
+    </div>
+  </header>
     <main>
       <section class="portfolio section">
         <div class="container">
@@ -53,7 +89,21 @@
             <li class="project-box project-list__project-box">
               <a href="" class="project-list__link link">
                 <div class="project-list__wrap">
+                  <picture>
+                    <source srcset="
+                          ./images/imgPortfol_1.jpg 370w,
+                          ./images/portfolio/por1_desk2x.jpg 740w"
+                      media="(min-width: 1200px)" sizes="(min-width: 1200px) 370px, 33vw">
+                    <source srcset="
+                         ./images/portfolio/por1_tab.jpg 354w,
+                         ./images/portfolio/por1_tab2x.jpg 708w"
+                      media="(min-width: 768px) and (max-width: 1199px)" sizes="(min-width: 768px) 354px, 50vw">
+                    <source srcset="
+                          ./images/portfolio/por1_mob.jpg 450w,
+                          ./images/portfolio/por1_mob2x.jpg  900w"
+                      media="(max-width: 767px)" sizes="(min-width: 480px) 450px, 100vw">
                 <img src="./images/imgPortfol_1.jpg" alt="" width="370">
+                </picture>
                 <p class="project-list__cover">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                 </div>
                 <div class="project-list__name">
@@ -65,7 +115,21 @@
             <li class="project-box project-list__project-box">
               <a href="" class="project-list__link link">
                 <div class="project-list__wrap">
+                  <picture>
+                    <source srcset="
+                          ./images/imgPortfol_2.jpg 370w,
+                          ./images/portfolio/por2_desk2x.jpg 740w" media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 33vw">
+                    <source srcset="
+                          ./images/portfolio/por2_tab.jpg 354w,
+                          ./images/portfolio/por2_tab2x.jpg 708w" media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes="(min-width: 768px) 354px, 50vw">
+                    <source srcset="
+                          ./images/portfolio/por2_mob.jpg 450w,
+                          ./images/portfolio/por2_mob2x.jpg  900w" media="(max-width: 767px)"
+                      sizes="(min-width: 480px) 450px, 100vw">
                 <img src="./images/imgPortfol_2.jpg" alt="" width="370">
+                </picture>
                 <p class="project-list__cover">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                 </div>
                 <div class="project-list__name">
@@ -77,7 +141,21 @@
             <li class="project-box project-list__project-box">
               <a href="" class="project-list__link link">
                 <div class="project-list__wrap">
+                  <picture>
+                    <source srcset="
+                        ./images/imgPortfol_3.jpg 370w,
+                        ./images/portfolio/por3_desk2x.jpg 740w" media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 33vw">
+                    <source srcset="
+                        ./images/portfolio/por3_tab.jpg 354w,
+                        ./images/portfolio/por3_tab2x.jpg 708w" media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes="(min-width: 768px) 354px, 50vw">
+                    <source srcset="
+                        ./images/portfolio/por3_mob.jpg 450w,
+                        ./images/portfolio/por3_mob2x.jpg  900w" media="(max-width: 767px)"
+                      sizes="(min-width: 480px) 450px, 100vw">
                 <img src="./images/imgPortfol_3.jpg" alt="" width="370">
+                </picture>
                 <p class="project-list__cover">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                 </div>
                 <div class="project-list__name">
@@ -89,7 +167,21 @@
             <li class="project-box project-list__project-box">
               <a href="" class="project-list__link link">
                 <div class="project-list__wrap">
+                  <picture>
+                    <source srcset="
+                      ./images/imgPortfol_4.jpg 370w,
+                      ./images/portfolio/por4_desk2x.jpg 740w" media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 33vw">
+                    <source srcset="
+                      ./images/portfolio/por4_tab.jpg 354w,
+                      ./images/portfolio/por4_tab2x.jpg 708w" media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes="(min-width: 768px) 354px, 50vw">
+                    <source srcset="
+                      ./images/portfolio/por4_mob.jpg 450w,
+                      ./images/portfolio/por4_mob2x.jpg  900w" media="(max-width: 767px)"
+                      sizes="(min-width: 480px) 450px, 100vw">
                 <img src="./images/imgPortfol_4.jpg" alt="" width="370">
+                </picture>
                 <p class="project-list__cover">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
               </div>
                 <div class="project-list__name">
@@ -101,7 +193,21 @@
           <li class="project-box project-list__project-box">
             <a href="" class="project-list__link link">
               <div class="project-list__wrap">
+                <picture>
+                  <source srcset="
+                    ./images/imgPortfol_5.jpg 370w,
+                    ./images/portfolio/por5_desk2x.jpg 740w" media="(min-width: 1200px)"
+                    sizes="(min-width: 1200px) 370px, 33vw">
+                  <source srcset="
+                    ./images/portfolio/por5_tab.jpg 354w,
+                   ./images/portfolio/por5_tab2x.jpg 708w" media="(min-width: 768px) and (max-width: 1199px)"
+                    sizes="(min-width: 768px) 354px, 50vw">
+                  <source srcset="
+                    ./images/portfolio/por5_mob.jpg 450w,
+                    ./images/portfolio/por5_mob2x.jpg  900w" media="(max-width: 767px)"
+                    sizes="(min-width: 480px) 450px, 100vw">
                 <img src="./images/imgPortfol_5.jpg" alt="" width="370">
+                </picture>
                 <p class="project-list__cover">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                   Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
               </div>
@@ -114,7 +220,21 @@
             <li class="project-box project-list__project-box">
               <a href="" class="project-list__link link">
                 <div class="project-list__wrap">
+                  <picture>
+                    <source srcset="
+                      ./images/imgPortfol_6.jpg 370w,
+                      ./images/portfolio/por6_desk2x.jpg 740w" media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 33vw">
+                    <source srcset="
+                      ./images/portfolio/por6_tab.jpg 354w,
+                      ./images/portfolio/por6_tab2x.jpg 708w" media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes="(min-width: 768px) 354px, 50vw">
+                    <source srcset="
+                      ./images/portfolio/por6_mob.jpg 450w,
+                      ./images/portfolio/por6_mob2x.jpg  900w" media="(max-width: 767px)"
+                      sizes="(min-width: 480px) 450px, 100vw">
                 <img src="./images/imgPortfol_6.jpg" alt="" width="370">
+                </picture>
                 <p class="project-list__cover">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                 </div> 
                 <div class="project-list__name">
@@ -126,7 +246,21 @@
             <li class="project-box project-list__project-box">
               <a href="" class="project-list__link link">
                 <div class="project-list__wrap">
+                  <picture>
+                    <source srcset="
+                      ./images/imgPortfol_7.jpg 370w,
+                      ./images/portfolio/por7_desk2x.jpg 740w" media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 33vw">
+                    <source srcset="
+                      ./images/portfolio/por7_desk2x.jpg 354w,
+                      ./images/portfolio/por7_tab2x.jpg 708w" media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes="(min-width: 768px) 354px, 50vw">
+                    <source srcset="
+                      ./images/portfolio/por7_mob.jpg 450w,
+                      ./images/portfolio/por7_mob2x.jpg  900w" media="(max-width: 767px)"
+                      sizes="(min-width: 480px) 450px, 100vw">
                 <img src="./images/imgPortfol_7.jpg" alt="" width="370">
+                </picture>
                 <p class="project-list__cover">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                 </div>
                 <div class="project-list__name">
@@ -138,7 +272,21 @@
             <li class="project-box project-list__project-box">
               <a href="" class="project-list__link link">
                 <div class="project-list__wrap">
+                  <picture>
+                    <source srcset="
+                      ./images/imgPortfol_8.jpg 370w,
+                      ./images/portfolio/por8_desk2x.jpg 740w" media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 33vw">
+                    <source srcset="
+                      ./images/portfolio/por8_tab.jpg 354w,
+                      ./images/portfolio/por8_tab2x.jpg 708w" media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes="(min-width: 768px) 354px, 50vw">
+                    <source srcset="
+                      ./images/portfolio/por8_mob.jpg 450w,
+                      ./images/portfolio/por8_mob2x.jpg  900w" media="(max-width: 767px)"
+                      sizes="(min-width: 480px) 450px, 100vw">
                 <img src="./images/imgPortfol_8.jpg" alt="" width="370">
+                </picture>
                 <p class="project-list__cover">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                 </div>
                 <div class="project-list__name">
@@ -150,7 +298,21 @@
             <li class="project-box project-list__project-box">
               <a href="" class="project-list__link link">
                 <div class="project-list__wrap">
+                  <picture>
+                    <source srcset="
+                      ./images/imgPortfol_9.jpg 370w,
+                      ./images/portfolio/por9_desk2x.jpg 740w" media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 33vw">
+                    <source srcset="
+                      ./images/portfolio/por9_tab.jpg 354w,
+                      ./images/portfolio/por9_tab2x.jpg 708w" media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes="(min-width: 768px) 354px, 50vw">
+                    <source srcset="
+                      ./images/portfolio/por9_mob.jpg 450w,
+                      ./images/portfolio/por9_mob2x.jpg  900w" media="(max-width: 767px)"
+                      sizes="(min-width: 480px) 450px, 100vw">
                 <img src="./images/imgPortfol_9.jpg" alt="" width="370">
+                </picture>
                 <p class="project-list__cover">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
               </div>
                 <div class="project-list__name">
@@ -165,56 +327,57 @@
     </main>
 
     <footer class="footer">
-      <div class="container footer__box">
-        <div class="adress-box">
-          <a href="" class="logo link">Web<span class="logo__light">Studio</span></a>
-          <address class="footer__adress">
-            <ul class="address-list list">
-              <li>
-                <a href="https://www.google.com/search?client=firefox-b-d&q=%D0%BA%D0%B8%D0%B5%D0%B2+%D1%83%D0%BB%D0%B8%D1%86%D0%B0+%D0%BB%D0%B5%D1%81%D0%B8+%D1%83%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8+26+%D0%B3%D1%83%D0%B3%D0%BB+%D0%BA%D0%B0%D1%80%D1%82%D1%8B"
-                  target="_blank" rel="noopener noreferrer" class="address-list__link link">г. Киев, пр-т Леси Украинки,
-                  26</a>
-              </li>
-              <li class="adress-list__contact"><a href="mailto:info@example.com"
-                  class="adress-list__contact-link link">info@example.com</a></li>
-              <li class="adress-list__contact"><a href="tel:+380991111111" class="adress-list__contact-link link">+38 099
-                  111 11 11</a></li>
-            </ul>
-          </address>
-        </div>
-        <div class="soc-box footer__soc-box">
-          <h2 class="soc-box__title">ПРИСОЕДИНЯЙТЕСЬ</h2>
-          <ul class="soc-list list">
-            <li class="soc-list__item"><a href="" class="soc-list__link soc-list__link--color">
-                <svg class="soc-list__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-              </a></li>
-            <li class="soc-list__item"><a href="" class="soc-list__link soc-list__link--color">
-                <svg class="soc-list__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-              </a></li>
-            <li class="soc-list__item"><a href="" class="soc-list__link soc-list__link--color">
-                <svg class="soc-list__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-              </a></li>
-            <li class="soc-list__item"><a href="" class="soc-list__link soc-list__link--color">
-                <svg class="soc-list__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-              </a></li>
+    <div class="container footer__box">
+      <div class="adress-box">
+        <a href="" class="logo link">Web<span class="logo__light">Studio</span></a>
+        <address class="footer__adress">
+          <ul class="address-list list">
+            <li>
+              <a href="https://www.google.com/search?client=firefox-b-d&q=%D0%BA%D0%B8%D0%B5%D0%B2+%D1%83%D0%BB%D0%B8%D1%86%D0%B0+%D0%BB%D0%B5%D1%81%D0%B8+%D1%83%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8+26+%D0%B3%D1%83%D0%B3%D0%BB+%D0%BA%D0%B0%D1%80%D1%82%D1%8B"
+                target="_blank" rel="noopener noreferrer" class="address-list__link link">г. Киев, пр-т Леси Украинки,
+                26</a>
+            </li>
+            <li class="adress-list__contact"><a href="mailto:info@example.com"
+                class="adress-list__contact-link link">info@example.com</a></li>
+            <li class="adress-list__contact"><a href="tel:+380991111111" class="adress-list__contact-link link">+38 099
+                111 11 11</a></li>
           </ul>
-        </div>
-        <div class="subscr footer__subscr">
-          <h2 class="subscr__title">Подпишитесь на рассылку</h2>
-          <form>
-            <label for="email_footer"></label>
-            <input type="email" name="email_footer" id="email_footer" class="subscr__input" placeholder="E-mail">
-            <button type="submit" class="bth-active subscr__bth-active">Подписаться
-              <svg class="bth-active__icon" width="24" height="24">
-                <use href="./images/icons.svg#icon-send"></use>
-            </button>
-          </form>
-        </div>
+        </address>
       </div>
+      <div class="soc-box footer__soc-box">
+        <h2 class="soc-box__title">ПРИСОЕДИНЯЙТЕСЬ</h2>
+        <ul class="soc-list list">
+          <li class="soc-list__item"><a href="" class="soc-list__link soc-list__link--color">
+              <svg class="soc-list__icon" width="20" height="20">
+                <use href="./images/icons.svg#icon-instagram"></use>
+            </a></li>
+          <li class="soc-list__item"><a href="" class="soc-list__link soc-list__link--color">
+              <svg class="soc-list__icon" width="20" height="20">
+                <use href="./images/icons.svg#icon-twitter"></use>
+            </a></li>
+          <li class="soc-list__item"><a href="" class="soc-list__link soc-list__link--color">
+              <svg class="soc-list__icon" width="20" height="20">
+                <use href="./images/icons.svg#icon-facebook"></use>
+            </a></li>
+          <li class="soc-list__item"><a href="" class="soc-list__link soc-list__link--color">
+              <svg class="soc-list__icon" width="20" height="20">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+            </a></li>
+        </ul>
+      </div>
+      <div class="subscr footer__subscr">
+        <h2 class="subscr__title">Подпишитесь на рассылку</h2>
+        <form>
+          <label for="email_footer"></label>
+          <input type="email" name="email_footer" id="email_footer" class="subscr__input" placeholder="E-mail">
+          <button type="submit" class="bth-active subscr__bth-active">Подписаться
+            <svg class="bth-active__icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-send"></use>
+          </button>
+        </form>
+      </div>
+    </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
