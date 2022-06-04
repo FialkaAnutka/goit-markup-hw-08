@@ -5,12 +5,25 @@
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: var(--accent-color);
+    padding-top: 16px;
+    padding-bottom: 16px;
+    @media screen and (min-width: 768px) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+        }
+    @media screen and (min-width: 1200px){
     padding-top: 24px;
     padding-bottom: 25px;
+    }
 }
-
+.logo--no-padding{
+    padding-top: 0;
+    padding-bottom: 0;
+}
 .header__logo {
+@media screen and (min-width: 768px) {
     margin-right: 93px;
+}
 }
 
 .logo__dark {
