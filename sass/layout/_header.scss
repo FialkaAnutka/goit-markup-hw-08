@@ -1,17 +1,15 @@
  .header {
     border-bottom: 1px solid #ECECEC;
-
-    @media (min-width: 768px) and (max-width: 1199px){
-       .container {
-          display: flex;          
+     .container{
+    @media (min-width: 768px){
+       display: flex;  
+       }
+    @media (min-width: 768px) and (max-width: 1199px) {
          align-items: center;
        }
       }
-   @media (min-width: 1200px){
-      display:inline-block;
    }
-    }
-
+  
  .header__container {
     position: relative;
  }
@@ -73,20 +71,20 @@
  .contact-list {
     display: none;
 
-    @media (min-width: 768px) {
+   @media (min-width: 768px) {
        display: block;
        margin-left: auto;
        align-items: center;
     }
-
+   @media (min-width: 1200px) {
+      display: flex;
     }
+   }
 .contact-list__item{
-@media (min-width: 768px) {
-   &:not(:last-child) {
-      margin-bottom: 10px;
+@media (min-width: 768px) and (max-width: 1199px) {
+     margin-bottom: 0;
    }
  }
-}
 
  .contact-list__item+.contact-list__item {
     @media (min-width: 1200px) {
